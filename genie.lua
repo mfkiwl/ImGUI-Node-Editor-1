@@ -21,9 +21,13 @@ project "node-editor"
 	configuration "debug"
 		targetdir (path.join(PROJ_DIR,"build/debug"))
 		debugdir(path.join(PROJ_DIR,"build/debug"))
+		defines { "_DEBUG", "_CONSOLE"}
+		flags {"Symbols"}
 	configuration "release"
 		targetdir (path.join(PROJ_DIR,"build/release"))
 		debugdir(path.join(PROJ_DIR,"build/release"))
+		defines { "NDEBUG", "_CONSOLE"}
+		flags { "OptimizeSpeed", "No64BitChecks" }
 
 	configuration {}
 	libdirs{
