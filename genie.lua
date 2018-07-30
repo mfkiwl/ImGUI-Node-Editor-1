@@ -13,7 +13,11 @@ platforms {
 
 language "C++"
 
-project "node-editor"
+	project "node-editor"
+		configurations "debug"
+			targetdir (path.join(PROJ_DIR,"build/debug"))
+		configurations "release"
+			targetdir (path.join(PROJ_DIR,"build/release"))
 
 	location "build/"
 	kind "ConsoleApp"
