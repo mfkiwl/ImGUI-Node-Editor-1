@@ -8,8 +8,16 @@
 #include <GLFW\glfw3.h>
 using namespace std;
 
+#include<iostream>
+#include "BasicNode.h"
+
 int main()
 {
-	return 0;
+	std::cout << "ses " << std::endl;
+	BasicNode a;
+	a.update();
+
+	system("pause");
+    return 0;
 }
 

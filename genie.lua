@@ -13,7 +13,7 @@ platforms {
 
 language "C++"
 
-project "node-editor"
+	project "node-editor"
 
 	location "build/"
 	kind "ConsoleApp"
