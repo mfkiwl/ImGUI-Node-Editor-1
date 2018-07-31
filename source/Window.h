@@ -13,9 +13,14 @@ public:
 	Window(int width, int height, string name);
 	~Window();
 
+	void Update();
+
+	GLFWwindow* GetWindow() { return m_window; };
+
 	int width, height;
 	string name;
 private:
+	static void Window::size_callback(GLFWwindow * window, int width, int height);
 	GLFWwindow* m_window;
 };
 

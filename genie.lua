@@ -47,3 +47,19 @@ language "C++"
 		path.join(PROJ_DIR,"source/*.c"),
 		path.join(PROJ_DIR,"source/*.h"),
 	}
+
+	--include all folders and subfolders
+	for dir in io.popen("dir source /s /b /o:n /a:d"):lines() do
+		files {
+			path.join(dir,"*.cpp"),
+			path.join(dir,"*.c"),
+			path.join(dir,"*.h"),
+		}
+	end
+
+	--imgui files
+	files {
+		path.join(PROJ_DIR,"include/imgui/*.cpp"),
+		path.join(PROJ_DIR,"include/imgui/*.c"),
+		path.join(PROJ_DIR,"include/imgui/*.h"),
+	}
